@@ -1,6 +1,6 @@
 # EConnect
 
-Sistema de administración escolar desarrollado como proyecto para la Escuela Técnica EPET N.º 12.
+Sistema de administración escolar
 
 ## Características
 
