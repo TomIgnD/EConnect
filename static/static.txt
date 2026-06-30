@@ -1,0 +1,2 @@
+Acá va todo lo de JavaScript, CSS, img, etc.
+(Todo lo de la página que no es estructura)

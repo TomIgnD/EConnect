@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vista Del Administrador</title>
+</head>
+
+<body>
+
+    <h1>Panel Del Administrador</h1>
+
+    <p>Desde esta página el administrador puede cargar información al sistema escolar.</p>
+
+    <hr>
+
+    <h2>Agregar Cooperadora</h2>
+
+    <form action="/capturar_cooperadora" method="POST">
+
+        <label>Precio de materiales por año:</label><br>
+        <input type="number" name="precio_mate_x_anio"><br><br>
+
+        <label>Pagos pendientes:</label><br>
+        <input type="number" name="pagos_pendientes"><br><br>
+
+        <button type="submit">Guardar Cooperadora</button>
+
+    </form>
+
+    <hr>
+
+    <h2>Agregar Área</h2>
+
+    <form action="/capturar_area" method="POST">
+
+        <label>ID Cooperadora:</label><br>
+        <input type="number" name="id_cooperadora"><br><br>
+
+        <label>Materias:</label><br>
+        <input type="text" name="materias"><br><br>
+
+        <label>Promedio:</label><br>
+        <input type="number" step="0.1" name="promedio"><br><br>
+
+        <button type="submit">Guardar Área</button>
+
+    </form>
+
+    <hr>
+
+    <h2>Agregar Especialidad</h2>
+
+    <form action="/capturar_especialidad" method="POST">
+
+        <label>ID Área:</label><br>
+        <input type="number" name="id_areas"><br><br>
+
+        <label>Cantidad de alumnos:</label><br>
+        <input type="number" name="cant_alum"><br><br>
+
+        <label>Turno:</label><br>
+        <input type="text" name="turno"><br><br>
+
+        <button type="submit">Guardar Especialidad</button>
+
+    </form>
+
+    <hr>
+
+    <h2>Agregar Profesor</h2>
+
+    <form action="/capturar_profesor" method="POST">
+
+        <label>DNI:</label><br>
+        <input type="number" name="dni_profesor"><br><br>
+
+        <label>Nombre:</label><br>
+        <input type="text" name="nombre"><br><br>
+
+        <label>Puntaje:</label><br>
+        <input type="text" name="puntuaje"><br><br>
+
+        <label>Cursos:</label><br>
+        <input type="text" name="cursos"><br><br>
+
+        <button type="submit">Guardar Profesor</button>
+
+    </form>
+
+    <hr>
+
+    <h2>Agregar Materia</h2>
+
+    <form action="/capturar_materia" method="POST">
+
+        <label>DNI del profesor:</label><br>
+        <input type="number" name="dni_profesor"><br><br>
+
+        <label>ID especialidad:</label><br>
+        <input type="number" name="id_especialidades"><br><br>
+
+        <label>Temas:</label><br>
+        <input type="text" name="temas"><br><br>
+
+        <label>Año:</label><br>
+        <input type="number" name="anio"><br><br>
+
+        <button type="submit">Guardar Materia</button>
+
+    </form>
+
+    <hr>
+
+    <h2>Agregar Alumno</h2>
+
+    <form action="/capturar_alumno" method="POST">
+
+        <label>DNI:</label><br>
+        <input type="number" name="dni_alumno"><br><br>
+
+        <label>Número de alumno:</label><br>
+        <input type="number" name="nro_alumno"><br><br>
+
+        <label>Nombre:</label><br>
+        <input type="text" name="nombre"><br><br>
+
+        <label>Materias adeudadas:</label><br>
+        <input type="text" name="mate_adeudadas"><br><br>
+
+        <button type="submit">Guardar Alumno</button>
+
+    </form>
+
+    <hr>
+
+    <h2>Agregar Curso</h2>
+
+    <form action="/capturar_curso" method="POST">
+
+        <label>ID Materia:</label><br>
+        <input type="number" name="id_materia"><br><br>
+
+        <label>DNI Alumno:</label><br>
+        <input type="number" name="dni_alumno"><br><br>
+
+        <label>Promedio:</label><br>
+        <input type="number" step="0.1" name="promedio"><br><br>
+
+        <label>Turno:</label><br>
+        <input type="text" name="turno"><br><br>
+
+        <label>Horarios:</label><br>
+        <input type="text" name="horarios"><br><br>
+
+        <button type="submit">Guardar Curso</button>
+
+    </form>
+
+    <hr>
+
+    <h2>Relaciones Entre Tablas</h2>
+
+    <form action="/capturar_tiene" method="POST">
+
+        <h3>Tabla TIENE</h3>
+
+        <label>ID Área:</label><br>
+        <input type="number" name="id_areas"><br><br>
+
+        <label>ID Especialidad:</label><br>
+        <input type="number" name="id_especialidades"><br><br>
+
+        <button type="submit">Guardar Relación</button>
+
+    </form>
+
+    <hr>
+
+    <form action="/capturar_divide" method="POST">
+
+        <h3>Tabla DIVIDE</h3>
+
+        <label>ID Materia:</label><br>
+        <input type="number" name="id_materia"><br><br>
+
+        <label>ID Especialidad:</label><br>
+        <input type="number" name="id_especialidades"><br><br>
+
+        <button type="submit">Guardar Relación</button>
+
+    </form>
+
+    <hr>
+
+    <form action="/capturar_hay" method="POST">
+
+        <h3>Tabla HAY</h3>
+
+        <label>ID Materia:</label><br>
+        <input type="number" name="id_materia"><br><br>
+
+        <label>Número de Curso:</label><br>
+        <input type="number" name="nro_curso"><br><br>
+
+        <button type="submit">Guardar Relación</button>
+
+    </form>
+
+    <hr>
+
+    <form action="/capturar_quedan" method="POST">
+
+        <h3>Tabla QUEDAN</h3>
+
+        <label>DNI Alumno:</label><br>
+        <input type="number" name="dni_alumno"><br><br>
+
+        <label>Número de Curso:</label><br>
+        <input type="number" name="nro_curso"><br><br>
+
+        <button type="submit">Guardar Relación</button>
+
+    </form>
+
+    <hr>
+
+    <a href="/">
+        <button>Volver A La Vista Del Usuario</button>
+    </a>
+
+</body>
+
+</html>

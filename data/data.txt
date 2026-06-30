@@ -1,0 +1,1 @@
+Acá van los datos que va almacenando la app.

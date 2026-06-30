@@ -1,0 +1,1 @@
+Acá va la estructura de las páginas (HTML) (La cambié para que funcione bien todo lo del flask)
